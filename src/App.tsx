@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MyHeader from './components/MyHeader';
+import MyFooter from './components/MyFooter';
+import SideMenu from './components/Sidemenu';
+import Content from './components/Contens';
 
-function App() {
+const App:React.FC = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex',flexDirection:'column',flex:1,height:'100vh' }}>
+
+    <MyHeader/>
+    <div style={{display:'flex',flexDirection:'row',flex:1}}>
+    <SideMenu/>
+    <Content/>
+    </div>
+    <MyFooter/>
     </div>
   );
 }
